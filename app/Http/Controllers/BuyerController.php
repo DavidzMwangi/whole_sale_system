@@ -18,7 +18,8 @@ class BuyerController extends Controller
     public function index()
     {
         $buyers=Buyer::all();
-        return View::make('buyers.all_buyers')->with('buyers',$buyers);
+        return View::make('buyers.all_buyers')
+            ->with('buyers',$buyers);
     }
 
     public function newBuyer(Request $request)
