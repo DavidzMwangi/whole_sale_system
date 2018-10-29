@@ -35,7 +35,12 @@ class HomeController extends Controller
         //get the purchases first
         $total_purchases=count(Purchase::all());
         $paid_purchases=count(Purchase::where('is_paid',true)->get());
-        $paid_purchases_percentage=($paid_purchases/$total_purchases)*100;
+        if($paid_purchases!=0){
+            $paid_purchases_percentage=($paid_purchases/$total_purchases)*100;
+
+        }else{
+            $paid_purchases_percentage=0;
+        }
 
         //get the percentage purchases for a whole year
         $year_purchases[]=12;

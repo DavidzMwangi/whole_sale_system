@@ -22,7 +22,7 @@ class CreateProfilesTable extends Migration
             $table->string('company_website')->nullable();
             $table->string('company_email')->nullable();
             $table->string('company_location');
-            $table->string('company_pic');
+            $table->string('company_pic')->default('profile.png');
             $table->timestamps();
         });
     }

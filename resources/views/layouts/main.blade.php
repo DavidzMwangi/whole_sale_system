@@ -26,8 +26,15 @@
 <header class="header">
     <div>
     <a href="#" class="logo">
+
+
         @php($pic_address=\App\Models\Profile::find(1))
+        @if($pic_address!=null)
        <img src="{{asset('uploads/company_profile/'.$pic_address->company_pic)}}" class="img-circle " height="50dp" width="50dp" alt="Logo">
+            @else
+            <img src="{{asset('uploads/company_profile/profile.png')}}" class="img-circle " height="50dp" width="50dp" alt="Logo">
+
+        @endif
     </a>
     </div>
     <nav class="navbar navbar-static-top" role="navigation">
