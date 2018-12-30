@@ -28,6 +28,7 @@ class BuyerController extends Controller
         $buyer->buyer_name=$request->input('buyer_name');
         $buyer->buyer_company_name=$request->input('buyer_company_name');
         $buyer->buyer_type=$request->input('buyer_type');
+        $buyer->email=$request->input('buyer_email');
         if ($request->has('is_loyal_customer')){
             $buyer->is_loyal_customer=true;
         }else{

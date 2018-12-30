@@ -25,7 +25,7 @@ class SupplierController extends Controller
         $supplier->supplier_name=$request->input('supplier_name');
         $supplier->supplier_phone_no=$request->input('supplier_phone_no');
         $supplier->supplier_company_name=$request->input('supplier_company_name');
-//        $supplier->product_supplied_name=$request->input('product_supplied_name');
+        $supplier->email=$request->input('supplier_email');
         $supplier->save();
 
         return redirect()->back();
@@ -47,7 +47,7 @@ class SupplierController extends Controller
         $supplier->supplier_name=$request->input('edit_supplier_name');
         $supplier->supplier_phone_no=$request->input('edit_supplier_phone_no');
         $supplier->supplier_company_name=$request->input('edit_supplier_company_name');
-//        $supplier->product_supplied_name=$request->input('edit_supplied_product');
+        $supplier->email=$request->input('edit_supplier_email');
         $supplier->save();
         return redirect()->back();
     }

@@ -85,6 +85,11 @@
                                 <th>
                                    Buyer Type
                                 </th>
+
+
+                                <th>
+                                    Email
+                                </th>
                                 <th>
                                    Loyal Customer
                                 </th>
@@ -104,6 +109,7 @@
                                     <td>{{$buyer->buyer_company_name}}</td>
 
                                     <td>{{$buyer->buyer_type}}</td>
+                                    <td>{{$buyer->email}}</td>
                                     <td>
                                         @if($buyer->is_loyal_customer==true)
 
@@ -205,6 +211,12 @@
 
                                     <input id="buyer_company_name" name="buyer_company_name" type="text" placeholder="Buyer Company Name" value="{{old('buyer_company_name')}}" class="form-control" required>
                                 </p>
+
+                                <p>
+                                    <label for="buyer_email">Buyer Email</label>
+
+                                    <input id="buyer_email" name="buyer_email" type="email" placeholder="Buyer Email" value="{{old('buyer_email')}}" class="form-control" >
+                                </p>
                             </div>
                             <div class="col-md-6">
                                 <p>
@@ -262,6 +274,11 @@
                                     <label for="edit_supplier_name">Supplier Name</label>
 
                                     <input id="edit_supplier_name" name="edit_supplier_name" type="text" placeholder="Supplier Name"  class="form-control" required>
+                                </p>
+                                <p>
+                                    <label for="edit_supplier_company_name">Supplier Company Name</label>
+
+                                    <input id="edit_supplier_company_name" name="edit_supplier_company_name" type="text"   class="form-control" required>
                                 </p>
                                 <p>
                                     <label for="edit_supplier_company_name">Supplier Company Name</label>

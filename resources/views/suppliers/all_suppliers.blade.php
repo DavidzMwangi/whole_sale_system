@@ -82,6 +82,10 @@
                                 <th>
                                    Supplier Phone Number
                                 </th>
+
+                                <th>
+                                   Supplier Email
+                                </th>
                                 <th>
                                     Edit
                                 </th>
@@ -98,6 +102,7 @@
                                     <td>{{$supplier->supplier_company_name}}</td>
 
                                     <td>{{$supplier->supplier_phone_no}}</td>
+                                    <td>{{$supplier->email}}</td>
                                     <td>
                                         <a href="#" data-target="#edit_modal" data-toggle="modal" onclick="getSupplierDetails({{$supplier->id}})"> Edit</a>
                                     </td>
@@ -197,6 +202,13 @@
 
                                     <input id="supplier_phone_no" name="supplier_phone_no" type="text" placeholder="Supplier Phone Number" value="{{old('product_supplied_name')}}" class="form-control" required>
                                 </p>
+
+
+                                <p>
+                                    <label for="supplier_email">Supplier Email</label>
+
+                                    <input id="supplier_email" name="supplier_email" type="email" placeholder="Supplier Email" value="{{old('supplier_email')}}" class="form-control" >
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -248,6 +260,13 @@
 
                                     <input id="edit_supplier_phone_no" name="edit_supplier_phone_no" type="text" class="form-control" required>
                                 </p>
+
+
+                                <p>
+                                    <label for="edit_supplier_email">Supplier Email</label>
+
+                                    <input id="edit_supplier_email" name="edit_supplier_email" type="email" class="form-control" >
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -275,6 +294,7 @@
                     $('#edit_supplier_name').val(result24.data.supplier.supplier_name);
                     $('#edit_supplier_company_name').val(result24.data.supplier.supplier_company_name);
                     $('#edit_supplier_phone_no').val(result24.data.supplier.supplier_phone_no);
+                    $('#edit_supplier_email').val(result24.data.supplier.email);
                 })
 
         }
